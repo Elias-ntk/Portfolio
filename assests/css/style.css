@@ -1,5 +1,6 @@
 /*------------ GOOGLE FONTS -----------*/
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&display=swap');
 
 /*------------ VARIABLES CSS ----------*/
 :root {
@@ -10,8 +11,9 @@
     --first-color-light: #8d35ff;
     --first-more-light: #9340ff;
     --fucsia: #ff3c5f;
-    --texto-dark: #949494;
-    --texto-light: #a6a6a6;
+    --texto-dark: #686868;
+    --texto-light: #c0c0c0;
+    --marco: #231D30;
 
     /*------ FONTS and TYPOGRAPHY -----*/
     --body-font:'Barlow Semi Condensed', sans-serif;
@@ -73,6 +75,1186 @@ body {
     margin: 0 0 var(--header-height) 0 ;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    background-color: var(--body-color);
+    background-color: var(--first-color-dark);
     color: var(--text-color);
+}
+
+h2,h3,h4 {
+    color: var(--texto-dark);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*------- Reusable CSS Clases -----*/
+
+.section {
+    padding: 2rem 0 4rem;
+}
+
+.section__title {
+    font-size: var(--h1-font-size);
+}
+
+.section__subtitle {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3);
+}
+
+.section__title,
+.section__subtitle {
+    text-align: center;
+}
+
+
+/*--------- LAYOUT ---------*/
+.container {
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    
+}
+
+
+
+
+
+
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--marco);
+}
+
+/*-------- NAV ---------*/
+.nav {
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+    color: var(--texto-dark);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo:hover{
+    color: var(--texto-light);
+}
+
+.nav__toggle{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav__toggle:hover{
+    color: var(--texto-light);
+}
+
+
+.nav__list{
+    max-width: 768px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--texto-light);
+    font-weight: var(--font-medium);
+}
+
+.nav__link:hover{
+    color: var(--first-color-dark);
+}
+
+.nav__icon{
+    font-size: 1.2rem;
+}
+
+.nav__close{
+    position:absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--texto-dark);
+}
+
+.nav__close:hover{
+    color: var(--texto-light);
+}
+
+.show-menu{
+    bottom: 0;
+    transition: ease-out .3s ;
+}
+
+
+
+/*------ LOGO 'CODE'--------*/
+.code__content{
+    position: absolute;
+    top: 24.5%;
+    left: 52.4%;
+    width: 342px;
+    height: 280px;
+    transform: matrix(0, 1, -1, 0, 0, 0);
+    
+}
+.code-light{
+   
+    position: absolute;
+    /*height:  79.12px ; */
+    bottom: 3.25%;
+    /* top: 30.5%; */
+    left: 9%;
+    transform:scaleX(1.25);
+    font-weight: 700;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 104px;
+    line-height: 115px;
+    color: rgba(255, 255, 255, 0.09);
+}
+.code-last-light{
+    position: absolute;
+    left: 9%;
+    transform:scaleX(1.25);
+    /*height:  79.12px  ; */
+    /*  left: 61.7%;
+    top: 30.5%; */
+    bottom: 43%;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 104px;
+    line-height: 115px;
+    color: rgba(255, 255, 255, 0.1);
+}
+.code-dark{
+    position: absolute;
+    left: 9%;
+    transform:scaleX(1.25);
+    /*height:  79.12px  ; */
+    /* left: 55.4%;
+    top: 30.5%; */
+    bottom: 16.5%;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 104px;
+    line-height: 115px;
+    color: #5B5562;
+}
+.code-color-f{
+    position: absolute;
+    left: 9%;
+    transform:scaleX(1.25);
+    /*height:  79.12px  ; */
+    /* left: 58.5%;
+    top: 30.5%; */
+    bottom: 30%;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 104px;
+    line-height: 115px;
+    color: transparent;
+    -webkit-text-stroke: 2.5px #FF3C5F;
+}
+
+/*--------TITLE-------*/
+.pre-title{
+    position: absolute;
+    top: 23%;
+    left: 25%;
+    color: white;
+    font-size: var(--h2-font-size);
+    font-weight: 800;
+}
+
+h1{
+    position: absolute;
+    width: 257px;
+    height: 185px;
+    left: 23%;
+    top: 27%;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 75px;
+
+    color: #FFFFFF;
+}
+.post-title{
+    position: absolute;
+    width: 257px;
+    height: 185px;
+    left: 20.7%;
+    top: 31.3%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 75px;
+
+    color: rgba(255, 255, 255, 0.04);
+
+}
+
+/*-------HOME DATA---------*/
+
+.home__data{
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    left: 6%;
+    top: 10.5%;
+}
+.home__data button{
+    background: rgba(217, 217, 217, 0.064);
+    border-radius: 25px;
+    border: 0;
+    
+}
+.my__data{
+    height: 18px;
+    color:rgba(244, 244, 244, 0.104);
+    font-weight: 700;
+    font-size: 10.5px;
+    padding:1px 10px;
+
+}
+
+.button-portfolio-contain{
+    position: 100%;
+    text-align: center;
+}
+.button_portfolio{
+    position: absolute;
+    top: 75%;
+    left: 44%;
+    text-align: center;
+    align-items: 50%;
+    width: 130px;
+    background: #9340FF;
+    border-radius: 24px;
+    font-size: ;
+    font-weight: var(--font-semi-bold);
+    color: rgba(255, 255, 255, 0.804);
+    padding: 10px 0px 10px 0px;
+}
+
+
+.home__social{
+    position: absolute;
+    left: 85%;
+    top: 25%;
+    display: grid;
+    gap: 5rem;
+    font-size: 1.5rem;
+    color: var(--texto-dark);
+}
+
+.socilaIcon{
+    color: #686868;
+}
+.socilaIcon:hover{
+    color: var(--fucsia);
+}
+.home__social a{
+    
+}
+.arrowPort{
+    margin: 0px 0px 0px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+    /*----------HEADER-------------*/
+    .header{
+        width: 100%;
+        position: fixed;
+        bottom: 0; 
+        left: 0;
+        z-index: var(--z-fixed);
+        background-color: var(--marco);
+    }
+    
+    /*-------- NAV ---------*/
+    .nav {
+        max-width: 968px;
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav__logo,
+    .nav__toggle {
+        color: var(--texto-dark);
+        font-weight: var(--font-medium);
+    }
+    
+    .nav__logo:hover{
+        color: var(--texto-light);
+    }
+    
+    .nav__toggle{
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .nav__toggle:hover{
+        color: var(--texto-light);
+    }
+
+
+
+    /*-------MENU-----------*/
+    .nav__menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--marco);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: ease-in .8s;
+    }    
+    .nav__list{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .nav__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: var(--small-font-size);
+        color: var(--texto-light);
+        font-weight: var(--font-medium);
+    }
+
+    .nav__link:hover{
+    color: var(--first-color-dark);
+    }
+
+    .nav__icon{
+        font-size: 1.2rem;
+    }
+
+    .nav__close{
+        position:absolute;
+        right: 1.3rem;
+        bottom: .5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--texto-dark);
+    }
+
+    .nav__close:hover{
+        color: var(--texto-light);
+    }
+
+    .show-menu{
+        bottom: 0;
+        transition: ease-out .3s ;    
+
+    }
+    
+        /*------ LOGO 'CODE'--------*/
+        
+        .code__content{
+            position: absolute;
+            top: 12.5%;
+            left: 65.4%;
+            width: 200px;
+            height: 150px;
+            transform: matrix(0, 1, -1, 0, 0, 0);
+            
+        }
+        .code-light{
+            top: 83px;
+            left: 8%;
+            font-size: 98px;
+        }
+        .code-last-light{
+            top: -23px;
+            left: 8%;
+            font-size: 98px;
+        }
+        .code-dark{
+            top: 48px;
+            left: 8%;
+            font-size: 98px;
+        }
+        .code-color-f{
+            top: 9%;
+            left: 8%;
+            font-size: 98px;
+        }
+    /*--------TITLE-------*/
+    .pre-title{
+        
+        top: 15%;
+        left: 25%;
+        
+    }
+
+    h1{
+        position: absolute;
+        
+        left: /* 37px */ 19%;
+        top: /* 262px */ 20%;
+
+    }
+    
+
+    .post-title{
+        position: absolute;
+
+        left: 15.7%;
+        top: 24.3%;
+
+    }
+
+    /*-------HOME DATA---------*/
+
+    .home__data{
+        display: flex;
+        gap: 1rem;
+        position: absolute;
+        left: 9.8%;
+        top: 7.5%;
+        
+    }
+    .home__data button{
+        
+        border-radius: 25px;
+        border: 0;
+
+    }
+    .my__data{
+        height: 20.5px;
+        font-weight: 700;
+        font-size: 12.5px;
+        padding:1px 10px;
+
+    }
+
+
+    .button-portfolio-contain{
+        text-align: center;
+    }
+    .button_portfolio{
+        position: absolute;
+        top: 57%;
+        left: 40.5%;
+        /* height: 45px; */
+        width: 150px;
+        font-size: 1.1rem;
+        align-items: 50%;
+        padding: 7px 0px 9px 0px;
+        /* padding-left: 12px; */
+    }
+    .button_portfolio:hover{
+        
+        transition: 0.5s;
+        
+    }
+
+
+    .home__social{
+        left: 34%;
+        top: 79%;
+        display: flex;
+        gap: 5rem;
+        font-size: 1.7rem;
+        
+    }
+
+    .socilaIcon{
+        color: #686868;
+    }
+    .socilaIcon:hover{
+        color:var(--fucsia);
+    }
+    .arrowPort{
+        margin: 0px 0px 0px 8px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 426px){
+
+    .header{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+        background-color: var(--marco);
+    }
+    
+    /*-------- NAV ---------*/
+    .nav {
+        
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav__logo,
+    .nav__toggle {
+        color: var(--texto-dark);
+        font-weight: var(--font-medium);
+    }
+    
+    .nav__logo:hover{
+        color: var(--texto-light);
+    }
+    
+    .nav__toggle{
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .nav__toggle:hover{
+        color: var(--texto-light);
+    }
+
+        /*-------MENU-----------*/
+        .nav__menu{
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--marco);
+            padding: 2rem 1.5rem 4rem;
+            box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+            border-radius: 1.5rem 1.5rem 0 0;
+            transition: ease-in .8s;
+        }    
+        .nav__list{
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+    
+        .nav__link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: var(--small-font-size);
+            color: var(--texto-light);
+            font-weight: var(--font-medium);
+        }
+    
+        .nav__link:hover{
+        color: var(--first-color-dark);
+        }
+    
+        .nav__icon{
+            font-size: 1.2rem;
+        }
+    
+        .nav__close{
+            position:absolute;
+            right: 1.3rem;
+            bottom: .5rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--texto-dark);
+        }
+    
+        .nav__close:hover{
+            color: var(--texto-light);
+        }
+    
+        .show-menu{
+            bottom: 0;
+            transition: ease-out .3s ;
+        }
+    
+        /*------ LOGO 'CODE'--------*/
+        .code__content{
+            position: absolute;
+            top: 12.5%;
+            left: 55.4%;
+            width: 200px;
+            height: 150px;
+            transform: matrix(0, 1, -1, 0, 0, 0);
+            
+        }
+        .code-light{
+            top: 62px;
+            left: 8%;
+            font-size: 85px;
+        }
+        .code-last-light{
+            top: -7px;
+            left: 8%;
+            font-size: 85px;
+        }
+        .code-dark{
+            top: 38px;
+            left: 8%;
+            font-size: 85px;
+        }
+        .code-color-f{
+            top: 9%;
+            left: 8%;
+            font-size: 85px;
+        }
+    
+        /*--------TITLE-------*/
+        .pre-title{
+            left: 16%;
+            font-size: 20px;
+        }
+        h1{
+            left: 10%;
+            font-size: 45px;
+        }
+        .post-title{
+            left: 6.7%;
+            font-size: 45px
+        }
+    
+        /*-------HOME DATA---------*/
+    
+        .home__data{
+            top: 50%;
+            left: 10.8%;
+            gap: 7.5px;
+        }
+    
+        .my__data{
+            font-size: 9px;
+            height: 16px;
+            padding: 0px 10px;
+        }
+    
+        /*-------BUTTON PORTFOLIO-----*/
+        .button_portfolio{
+            position: absolute;
+            top: 67%;
+            left: 35%;
+            text-align: center;
+            align-items: 50%;
+            width: 110px;
+            height: 30px;
+            background: #9340FF;
+            border-radius: 24px;
+            font-size: var(--small-font-size);
+            font-weight: var(--font-semi-bold);
+            color: rgba(255, 255, 255, 0.804);
+            padding: 5px 8px 7px 8px;
+        }
+    
+        /*--------HOME SOCIAL--------*/
+        .home__social{
+            position: absolute;
+            left: 23%;
+            top: 85%;
+            display: flex;
+            gap: 5rem;
+            font-size: 1.5rem;
+            color: var(--texto-dark);
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 376px){
+
+    .header{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+        background-color: var(--marco);
+    }
+    
+    /*-------- NAV ---------*/
+    .nav {
+        
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav__logo,
+    .nav__toggle {
+        color: var(--texto-dark);
+        font-weight: var(--font-medium);
+    }
+    
+    .nav__logo:hover{
+        color: var(--texto-light);
+    }
+    
+    .nav__toggle{
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .nav__toggle:hover{
+        color: var(--texto-light);
+    }
+
+        /*-------MENU-----------*/
+        .nav__menu{
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--marco);
+            padding: 2rem 1.5rem 4rem;
+            box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+            border-radius: 1.5rem 1.5rem 0 0;
+            transition: ease-in .8s;
+        }    
+        .nav__list{
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+    
+        .nav__link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: var(--small-font-size);
+            color: var(--texto-light);
+            font-weight: var(--font-medium);
+        }
+    
+        .nav__link:hover{
+        color: var(--first-color-dark);
+        }
+    
+        .nav__icon{
+            font-size: 1.2rem;
+        }
+    
+        .nav__close{
+            position:absolute;
+            right: 1.3rem;
+            bottom: .5rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--texto-dark);
+        }
+    
+        .nav__close:hover{
+            color: var(--texto-light);
+        }
+    
+        .show-menu{
+            bottom: 0;
+            transition: ease-out .3s ;
+        }
+    
+        /*------ LOGO 'CODE'--------*/
+        .code__content{
+            position: absolute;
+            top: 12.5%;
+            left: 48.4%;
+            width: 200px;
+            height: 150px;
+            transform: matrix(0, 1, -1, 0, 0, 0);
+            
+        }
+        .code-light{
+            top: 62px;
+            left: 8%;
+            font-size: 65px;
+        }
+        .code-last-light{
+            top: -7px;
+            left: 8%;
+            font-size: 65px;
+        }
+        .code-dark{
+            top: 38px;
+            left: 8%;
+            font-size: 65px;
+        }
+        .code-color-f{
+            top: 9%;
+            left: 8%;
+            font-size: 65px;
+        }
+    
+        /*--------TITLE-------*/
+        .pre-title{
+            left: 20%;
+            font-size: 20px;
+        }
+        h1{
+            left: 14%;
+            font-size: 45px;
+        }
+        .post-title{
+            left: 10.7%;
+            font-size: 45px;
+        }
+    
+        /*-------HOME DATA---------*/
+    
+        .home__data{
+            top: 50%;
+            left: 14.8%;
+            gap: 7.5px;
+        }
+    
+        .my__data{
+            font-size: 9px;
+            height: 16px;
+            padding: 0px 10px;
+        }
+    
+        /*-------BUTTON PORTFOLIO-----*/
+        .button_portfolio{
+            position: absolute;
+            top: 67%;
+            left: 35%;
+            text-align: center;
+            align-items: 50%;
+            width: 110px;
+            height: 30px;
+            background: #9340FF;
+            border-radius: 24px;
+            font-size: var(--small-font-size);
+            font-weight: var(--font-semi-bold);
+            color: rgba(255, 255, 255, 0.804);
+            padding: 5px 8px 7px 8px;
+        }
+    
+        /*--------HOME SOCIAL--------*/
+        .home__social{
+            position: absolute;
+            left: 20%;
+            top: 85%;
+            display: flex;
+            gap: 5rem;
+            font-size: 1.3rem;
+            color: var(--texto-dark);
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 320px){
+
+    .header{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: var(--z-fixed);
+        background-color: var(--marco);
+    }
+    
+    /*-------- NAV ---------*/
+    .nav {
+        
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav__logo,
+    .nav__toggle {
+        color: var(--texto-dark);
+        font-weight: var(--font-medium);
+    }
+    
+    .nav__logo:hover{
+        color: var(--texto-light);
+    }
+    
+    .nav__toggle{
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .nav__toggle:hover{
+        color: var(--texto-light);
+    }
+
+    /*------MENU---------*/
+    .nav__menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--marco);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: ease-in .8s;
+    }    
+    .nav__list{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .nav__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: var(--small-font-size);
+        color: white;
+        font-weight: var(--font-medium);
+    }
+
+    .nav__link:hover{
+    color: var(--texto-light);
+    }
+
+    .nav__icon{
+        font-size: 1.2rem;
+    }
+
+    .nav__close{
+        position:absolute;
+        right: 1.3rem;
+        bottom: .5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--texto-dark);
+    }
+
+    .nav__close:hover{
+        color: var(--first-color-dark);
+    }
+
+    .show-menu{
+        bottom: 0;
+        transition: ease-out .3s ;
+    }
+
+    /*------ LOGO 'CODE'--------*/
+    .code__content{
+        position: absolute;
+        top: 12.5%;
+        left: 48.4%;
+        width: 200px;
+        height: 150px;
+        transform: matrix(0, 1, -1, 0, 0, 0);
+        
+    }
+    .code-light{
+        top: 62px;
+        left: 8%;
+        font-size: 65px;
+    }
+    .code-last-light{
+        top: -7px;
+        left: 8%;
+        font-size: 65px;
+    }
+    .code-dark{
+        top: 38px;
+        left: 8%;
+        font-size: 65px;
+    }
+    .code-color-f{
+        top: 9%;
+        left: 8%;
+        font-size: 65px;
+    }
+
+    /*--------TITLE-------*/
+    .pre-title{
+        left: 16%;
+        font-size: 20px;
+    }
+    h1{
+        left: 10%;
+        font-size: 42px;
+    }
+    .post-title{
+        left: 6.7%;
+        font-size: 42px
+    }
+
+/*-------HOME DATA---------*/
+
+    .home__data{
+        top: 50%;
+        left: 7.8%;
+        gap: 7.5px;
+
+    }
+
+    .my__data{
+        height: 15px;
+        font-size: 9px;
+        padding: 0px 10px;
+        
+    }
+
+    /*-------BUTTON PORTFOLIO-----*/
+    .button_portfolio{
+        position: absolute;
+        top: 67%;
+        left: 33%;
+        text-align: center;
+        align-items: 50%;
+        width: 110px;
+        height: 30px;
+        background: #9340FF;
+        border-radius: 24px;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-semi-bold);
+        color: rgba(255, 255, 255, 0.804);
+        padding: 5px 8px 7px 8px;
+    }
+
+    /*--------HOME SOCIAL--------*/
+    .home__social{
+        position: absolute;
+        left: 15%;
+        top: 85%;
+        display: flex;
+        gap: 5rem;
+        font-size: 1.3rem;
+        color: var(--texto-dark);
+    }
+
+
 }
