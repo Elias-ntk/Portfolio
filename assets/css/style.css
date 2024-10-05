@@ -1,0 +1,77 @@
+/*------------ GOOGLE FONTS -----------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&display=swap');
+
+
+    /*----------- Variables -----------*/
+
+:root {
+    /*------------ Colors ------------*/
+    --first-color-dark: #0a0219;
+    --first-color-light: #8d35ff;
+    --first-more-light: #9340ff;
+    --fucsia: #ff3c5f;
+    --texto-dark: #686868;
+    --texto-light: #c0c0c0;
+    --marco: #231D30;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color:var(--first-color-dark);
+    font-family: sans-serif;
+}
+
+
+    /*----------- Navbar -----------*/
+.navbar {
+    padding: 2rem;
+    
+}
+.navbar .nav-link,.navbar .nav-link.active{
+    color:var(--texto-light);
+}
+
+.collapse {
+    align-items: center;
+    
+}
+
+.nav-item {
+    
+}
+
+/*-------------- Title --------------*/
+h1{
+    position: absolute;
+    width: 257px;
+    height: 185px;
+    left: 23%;
+    top: 27%;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 75px;
+
+    color: #FFFFFF;
+}
+
+.pre-title{
+    position: absolute;
+    top: 23%;
+    left: 25%;
+    color: #FFFFFF;
+    font-size: var(--h2-font-size);
+    font-weight: 800;
+}
+
+
