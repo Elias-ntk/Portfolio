@@ -15,6 +15,18 @@
     --texto-light: #c0c0c0;
     --marco: #231D30;
 
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .73rem;
+
+    /*----- FONT WEIGHT -------*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
 }
 
 
@@ -32,7 +44,7 @@ body {
 
     /*----------- Navbar -----------*/
 .navbar {
-    padding: 2rem;
+    padding: 1.5rem;
     
 }
 .navbar .nav-link,.navbar .nav-link.active{
@@ -45,33 +57,91 @@ body {
 }
 
 .nav-item {
+    margin-left: 2.5rem;
     
 }
+.nav-link{
+    font-size: 1rem;
+}
+.nav-link:hover{
+    color: #ffffff;
+}
 
-/*-------------- Title --------------*/
-h1{
-    position: absolute;
-    width: 257px;
-    height: 185px;
-    left: 23%;
-    top: 27%;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 70px;
-    line-height: 75px;
+.header-contain{
+    margin-bottom:2rem;
+}
 
-    color: #FFFFFF;
+/*-------------- Title and Hero --------------*/
+section {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
 .pre-title{
-    position: absolute;
-    top: 23%;
-    left: 25%;
+    /* position: absolute;
+    top: 22%;
+    left: 22%; */
     color: #FFFFFF;
-    font-size: var(--h2-font-size);
+    font-size: 1.5rem;
     font-weight: 800;
+    margin:0;
 }
 
 
+
+h1{
+    /* position: absolute;
+    left: 20%;
+    top: 27%; */
+    width: 257px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4.2rem;
+    /* line-height: 75px; */
+    color: #FFFFFF;
+    
+}
+
+/*----- HOME SOCIAL(linkedin,github,gmail) -----*/
+.home-social{
+    
+    
+}
+
+.home-social-icon{
+    padding: 0 1rem 0 1rem;
+    font-size:2rem;
+    color: var(--texto-dark);
+    justify-content:space-between;
+    
+}
+.home-social-icon i:hover{
+    color: var(--fucsia);
+    transition: 0.3s;
+}
+
+/*----- BUTTON PORTFOLIO -----*/
+.home-button-portfolio-contain{
+    
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+.button-portfolio{
+    align-items: center;
+    width: 230px;
+    background: #9340FF;
+    border-radius: 24px;
+    font-weight: var(--font-semi-bold);
+    color: rgba(255, 255, 255, 0.804);
+    padding: 10px 20px 10px 20px;
+    font-weight: var(--font-semi-bold);
+}
+
+a{
+    text-decoration: none;
+}
