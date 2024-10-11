@@ -17,9 +17,9 @@
 
     /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
     --big-font-size: 2rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
+    /* --h1-font-size: 1.5rem; */
+    --h2-font-size: 2.5rem;
+    --h3-font-size: 2.125rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
     --smaller-font-size: .73rem;
@@ -27,8 +27,25 @@
     /*----- FONT WEIGHT -------*/
     --font-medium: 500;
     --font-semi-bold: 600;
+    --font-bold: 700;
 }
 
+/* Custom classes for Bootstrap */
+.bg-custom-gray{
+    background-color:#c0c0c0;
+}
+.bg-custom-fucsia{
+    background-color:#ff3c5f;
+}
+.bg-custom-purple{
+    background-color:#0a0219;
+}
+.bg-custom-pl-gray{
+    background-color:#231D30;
+}
+.bg-custom-pl-light{
+    background-color:#8d35ff;
+}
 
 * {
     box-sizing: border-box;
@@ -41,10 +58,14 @@ body {
     font-family: sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 
     /*----------- Navbar -----------*/
 .navbar {
-    padding: 1.5rem;
+    padding: 1rem;
     
 }
 .navbar .nav-link,.navbar .nav-link.active{
@@ -71,7 +92,15 @@ body {
     margin-bottom:2rem;
 }
 
-/*-------------- Title and Hero --------------*/
+/*-------------- Hero --------------*/
+.row{
+    /* padding-bottom: 10rem; */
+    /* align-items: center;
+    justify-content: center; */
+}
+.hero{
+    height: 100vh;
+}
 section {
     display: flex;
     flex-direction:column;
@@ -84,12 +113,10 @@ section {
     top: 22%;
     left: 22%; */
     color: #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 800;
     margin:0;
 }
-
-
 
 h1{
     /* position: absolute;
@@ -99,15 +126,15 @@ h1{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
-    font-size: 4.2rem;
+    font-size: 4.8rem;
     /* line-height: 75px; */
     color: #FFFFFF;
     
 }
 
-/*----- HOME SOCIAL(linkedin,github,gmail) -----*/
+/*-------- HOME SOCIAL --------*/
 .home-social{
-    
+    /* height:100px; */
     
 }
 
@@ -125,7 +152,7 @@ h1{
 
 /*----- BUTTON PORTFOLIO -----*/
 .home-button-portfolio-contain{
-    
+    /* height: 120px; */
     text-align: center;
     padding: 1rem;
     
@@ -134,7 +161,7 @@ h1{
 .button-portfolio{
     align-items: center;
     width: 230px;
-    background: #9340FF;
+    background: #8d35ff;
     border-radius: 24px;
     font-weight: var(--font-semi-bold);
     color: rgba(255, 255, 255, 0.804);
@@ -142,6 +169,87 @@ h1{
     font-weight: var(--font-semi-bold);
 }
 
-a{
-    text-decoration: none;
+/*---------- About Me ----------*/
+.about-me{
+    
 }
+
+.about-me h2{
+    color:#c0c0c0;
+    font-weight:800;
+    background-color:;
+    width:300px;
+    font-size:2.5rem;
+    font-family:roboto;
+}
+.title-aboutMe{
+    text-align: center; 
+    margin:auto;
+}
+.about-text h3{
+    font-weight:600;
+    color:#ff3c5f;
+    text-align: left;
+}
+.about-text p{
+    color:#686868;
+    font-weight: 500;
+    text-align:left;
+}
+
+/*---- Education/Experience ----*/
+.education-text h3{
+    font-weight:600;
+    color:#9a9a9a;
+    text-align: left;
+}
+.title-platzi{
+    color:rgb(191, 191, 152);
+}
+.title-sololearn{
+    color:rgb(191, 191, 152);
+}
+.certificate{
+    width: 110px;
+}
+.html-text{
+    height: 54px;
+    margin-bottom:8px;
+
+}
+.certificate-text{
+    color:#686868;
+}
+/*--------- Lenguage Levels ---------*/
+.levels-text{
+    color: #686868;
+}
+.title-lenguage-levels{
+    color:#9a9a9a;
+    font-weight: 600;
+}
+
+/*---------- Other Skills ----------*/
+.title-other-skills{
+    color:#9a9a9a;
+    font-weight: 600;
+}
+
+
+/*--------- Portfolio ---------*/
+.portfolio{
+    
+}
+.title-portfolio h2{
+    font-size: var(--h2-font-size);
+    font-weight: 800;
+    font-family: roboto;
+    color:#c0c0c0;
+}
+
+/*----------- Footer -----------*/
+.footer{
+    height: 200px;
+    background-color:#220e3c;
+}
+

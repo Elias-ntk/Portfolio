@@ -13,7 +13,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Icons Bootstrap -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" type="image/x-icon" href="assets/img/file-code-fill.svg" >
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -21,6 +21,7 @@
     <title>Elias Segovia | Portfolio</title>
 </head>
 <body>
+    
         <!----- Navbar ----->
         <nav class="navbar navbar-expand-md  justify-content-end">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -48,14 +49,13 @@
         <!----- Section hero ----->
         <section class="hero d-flex ">
             <div class="container vertical-center px-5">
-                <div class="row">
+                <div class="row ">
                     <div class="titles-contain col-12 mb-5 mt-5 ">
                         <p class="pre-title ">Hola! soy</p>
-                        <h1 class="home__title ">Elias <span class="space"><!--&nbsp;-->Segovia</span></h1>
+                        <h1 class="home__title mb-5 pb-5align-items-center ">Elias <br/>Segovia</h1>
                     </div>
-
                      <!-------- Home social -------->
-                    <div class="home-social text-center mb-5 mt-5 ">
+                    <div class="home-social text-center mb-5  ">
                         <a href="http://www.linkedin.com/in/elias-segovia-7b8b05200/" target="_blank" class="home-social-icon ">
                             <i class="uil uil-linkedin-alt socialIcon"></i>
                         </a>
@@ -66,7 +66,7 @@
                             <i class="uil uil-envelope-alt socialIcon"></i>
                         </a>
                     </div>
-                    <div class="home-button-portfolio-contain ">
+                    <div class="home-button-portfolio-contain pb-5 mb-4">
                         <a href="#portafolio" class="button-portfolio">
                             Portafolio
                             <i class="uil uil-arrow-circle-down arrowPort"></i>
@@ -74,12 +74,138 @@
                     </div>
                 </div>
             </div>
+            
+        </section>
+            
+        <!---------- Section About Me ---------->
+        <section class="about-me text-center py-1" id="obout">
+            <div class="container-lg py-4 ">  
+                <div class="row justify-content-center align-items-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="title-aboutMe text-center py-2  mb-4">Sobre Mi</h2>  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <div class="about-text mb-5">
+                            <h3 class="mb-4 px-3">¿Quién soy?</h3>
+                            <p class="px-3 ">Soy un desarrollador de 23 años con experiencias en frontend.<br/>  
+                            Actualmente creando proyectos y aprendiendo nuevas tecnologías. Me adapto
+                            rápido a cualquier tipo de lenguaje y framework apuntado a especializarme 
+                            en el ambito de la programación.
+                            </p> 
+                        </div>
+                        <!------ Education/Experience ------>
+                        <div class="education-text text-start px-3">
+                            <h3 class="mb-4">Experiencia/Educación</h3>
+                            <div class="d-flex">
+                                <div class=" d-flex-column pe-2">
+                                    <div class="title-platzi mb-2">Platzi</div>
+                                    <a href="https://platzi.com/p/eliassegovia43/curso/1050-basico-programacion/diploma/detalle/" target="_blank">
+                                        <img src="assets/img/img Platzi.png" class=" certificate" alt="Certificado" >
+                                    </a>
+                                    <p class="mb-2 certificate-text">Programación </br>Básica</p>
+
+                                    <div class="d-flex-column pe-3">
+                                        <a href="https://www.sololearn.com/certificates/CT-VINRJTWB" target="_blank">
+                                            <img src="assets/img/CSS certificado.jpg" class="certificate" alt="Certificado" >
+                                        </a>
+                                        <p class="certificate-text">Css</p>
+                                    </div>
+                                </div>
+                                <div class=" d-flex-column">
+                                    <div class="title-sololearn mb-2">SoloLearn</div>
+                                    <div class="d-flex">
+                                        <div class="html-contain d-flex-column pe-3  ">
+                                            <a href="https://www.sololearn.com/certificates/CT-ZQB4B86J" target="_blank">
+                                                <img src="assets/img/html certificado.png" class="certificate" alt="Certificado" >
+                                            </a>
+                                            <p class="html-text certificate-text">Html</p>
+                                        </div>   
+                                        
+                                    </div>
+                                    <div class="d-flex-column ">
+                                        <a href="https://www.sololearn.com/certificates/CT-ZKDSVLBD" target="_blank">
+                                            <img src="assets/img/javascript certificado.png" class="certificate" alt="Certificado" >
+                                        </a>
+                                        <p class="certificate-text">JavaScript</p>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <!--------- Lenguage Levels --------->
+                    <div class="col-md-6 px-3 ">
+                        <h3 class="title-lenguage-levels">Lenguajes/Frameworks</h3>
+                        <div class="skill-item mb-4 px-3">
+                            <h3 class="fs-6 text-start levels-text">Html</h3>
+                            <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                                <div class="progress-bar bg-custom-pl-light" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4 px-3">
+                            <h3 class="fs-6 text-start levels-text">Css</h3>
+                            <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                                <div class="progress-bar bg-custom-pl-light" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4 px-3">
+                            <h3 class="fs-6 text-start levels-text">JavaScript</h3>
+                            <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                                <div class="progress-bar bg-custom-pl-light" style="width: 87%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item mb-4 px-3">
+                            <h3 class="fs-6 text-start levels-text">Bootstrap</h3>
+                            <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                                <div class="progress-bar bg-custom-pl-light" style="width: 79%"></div>
+                            </div>
+                        </div>
+                        <!--------- Other Skills --------->
+                        <div class="contain-other-skills my-5 ">
+                            <h3 class="title-other-skills">Otras Habilidades</h3>
+                            <div class="other-skills-item mb-4 px-3">
+                                <h3 class="fs-6 text-start levels-text">Photoshop</h3>
+                                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                                    <div class="progress-bar bg-custom-fucsia" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="other-skills-item mb-4 px-3">
+                                <h3 class="fs-6 text-start levels-text">Illustrator</h3>
+                                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                                    <div class="progress-bar bg-custom-fucsia" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="other-skills-item mb-4 px-3">
+                                <h3 class="fs-6 text-start levels-text">Figma</h3>
+                                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                                    <div class="progress-bar bg-custom-fucsia" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>    
         </section>
 
-    
-    
-        
-    
+        <!------------- Portfolio ------------->
+        <section class="portfolio" id="portfolio">
+            <div class="contain-lg">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="title-portfolio text-center">
+                            <h2>Portafolio</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------- Footer --------------->
+        <footer class="footer">
+
+        </footer>
 
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
