@@ -15,8 +15,40 @@
     --texto-light: #c0c0c0;
     --marco: #231D30;
 
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    /* --h1-font-size: 1.5rem; */
+    --h2-font-size: 2.5rem;
+    --h3-font-size: 2.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .73rem;
+
+    /*----- FONT WEIGHT -------*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
 }
 
+/* Custom classes for Bootstrap */
+.bg-custom-gray{
+    background-color:#c0c0c0;
+}
+.bg-custom-fucsia{
+    background-color:#ff3c5f;
+}
+.bg-custom-purple{
+    background-color:#0a0219;
+}
+.bg-custom-pl-gray{
+    background-color:#231D30;
+}
+.bg-custom-pl-light{
+    background-color:#8d35ff;
+}
+.bg-custom-pl-light-{
+    background-color:#ec00f908;
+}
 
 * {
     box-sizing: border-box;
@@ -29,10 +61,14 @@ body {
     font-family: sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
 
     /*----------- Navbar -----------*/
 .navbar {
-    padding: 2rem;
+    padding: 1rem;
     
 }
 .navbar .nav-link,.navbar .nav-link.active{
@@ -45,33 +81,299 @@ body {
 }
 
 .nav-item {
+    margin-left: 2.5rem;
     
 }
+.nav-link{
+    font-size: 1rem;
+}
+.nav-link:hover{
+    color: #ffffff;
+}
 
-/*-------------- Title --------------*/
-h1{
-    position: absolute;
-    width: 257px;
-    height: 185px;
-    left: 23%;
-    top: 27%;
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 70px;
-    line-height: 75px;
+.header-contain{
+    margin-bottom:2rem;
+}
 
-    color: #FFFFFF;
+/*-------------- Hero --------------*/
+.row{
+    /* padding-bottom: 10rem; */
+    /* align-items: center;
+    justify-content: center; */
+}
+.hero{
+    height: 100vh;
+}
+section {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
 
 .pre-title{
-    position: absolute;
-    top: 23%;
-    left: 25%;
+    /* position: absolute;
+    top: 22%;
+    left: 22%; */
     color: #FFFFFF;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin:0;
+}
+
+h1{
+    /* position: absolute;
+    left: 20%;
+    top: 27%; */
+    width: 257px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4.8rem;
+    /* line-height: 75px; */
+    color: #FFFFFF;
+    
+}
+
+/*-------- HOME SOCIAL --------*/
+.home-social{
+    /* height:100px; */
+    
+}
+
+.home-social-icon{
+    padding: 0 1rem 0 1rem;
+    font-size:2rem;
+    color: var(--texto-dark);
+    justify-content:space-between;
+    
+}
+.home-social-icon i:hover{
+    color: var(--fucsia);
+    transition: 0.3s;
+}
+
+/*----- BUTTON PORTFOLIO -----*/
+.home-button-portfolio-contain{
+    /* height: 120px; */
+    text-align: center;
+    padding: 1rem;
+    
+}
+
+.button-portfolio{
+    align-items: center;
+    width: 230px;
+    background: #8d35ff;
+    border-radius: 24px;
+    font-weight: var(--font-semi-bold);
+    color: rgba(255, 255, 255, 0.804);
+    padding: 10px 20px 10px 20px;
+    font-weight: var(--font-semi-bold);
+}
+
+/*---------- About Me ----------*/
+.about-me{
+    height: ;
+}
+
+.pretitle-aboutMe{
+    color: #a872e8;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.title-aboutMe{
+    color:#9a9a9a;
+    font-weight:800;
+    background-color:;
+    width:300px;
+    font-size:2.8rem;
+    font-family:roboto;
+    text-align: center; 
+    margin:auto;
+}
+.about-text h3{
+    font-weight:600;
+    color:#ff3c5f;
+    text-align: left;
+}
+.about-text p{
+    color:#fdf6e2;
+    font-weight: 500;
+    text-align:center;
+    background-color: #191424;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+/*---- Education/Experience ----*/
+.education-text h3{
+    font-weight:600;
+    color:#9a9a9a;
+    text-align: left;
+}
+.title-platzi{
+    color:#a872e8;
+    font-weight: 600;
+}
+.title-sololearn{
+    color:#a872e8;
+    font-weight: 600;
+}
+.certificate{
+    width: 110px;
+}
+.html-text{
+    height: 54px;
+    margin-bottom:8px;
+
+}
+.certificate-text{
+    color:#686868;
+}
+
+/*----------- Accordion -----------*/
+.accordion-item {  
+    background-color: #1c1c30; /* Color de fondo para el acordeón */  
+    border: none; /* Quitar los bordes */  
+} 
+.accordion-button {  
+    background-color: #0a0219; /* Color de fondo para el botón */  
+    color: #9a9a9a; /* Color del texto */  
+    border: 2px solid #5a5a7a;
+    font-weight: 600;
+}
+.accordion-button:not(.collapsed) {  
+    background-color: #8d35ff; /* Color del botón cuando está colapsado */  
+    color: #ffffff; /* Color del texto */  
+}  
+
+
+
+/*--------- Lenguage Levels ---------*/
+.levels-text{
+    color: #686868;
+}
+.title-skills{
+    color:#9a9a9a;
+    font-weight:800;
+    background-color:;
+    width:300px;
+    font-size:2.8rem;
+    font-family:roboto;
+    text-align: center; 
+    margin:auto;
+}
+.title-programacion-skills{
+    color:#9a9a9a;
+    font-weight: 600;
+    font-size: calc(1.3rem + .6vw);
+}
+
+/*---------- Other Skills ----------*/
+.title-other-skills{
+    color:#9a9a9a;
+    font-weight: 600;
+    font-size: calc(1.3rem + .6vw);
+}
+/*--------- Lenguage Icons ---------*/
+.lenguage-icons-contain{
+    
+}
+
+/*--------- Portfolio ---------*/
+.title-portfolio {
     font-size: var(--h2-font-size);
     font-weight: 800;
+    font-family: roboto;
+    color:#9a9a9a;
+}
+.portfolio img{
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display:block;
+    transition: all 0.2 ease;
+}
+.container-proyectes{
+    padding-top: 60px;
+    margin-bottom: 40px;
+}
+
+/*----------- Footer -----------*/
+.footer{
+    height: 200px;
+    background-color:#220e3c;
 }
 
 
+
+
+/*---------- @Media ----------*/
+/* Para pantallas pequeñas y menores */  
+@media (min-width: 576px) {  
+    .lenguage-icons-contain .row {  
+        flex-wrap: nowrap; /* No permitir que los iconos se envuelvan */  
+        justify-content: center; /* Centrar los iconos */  
+    }
+
+      
+}  
+
+/* Para pantallas extra pequeñas (si necesita ser específico) */  
+@media (max-width: 575.98px) {  
+    .lenguage-icons-contain .row {  
+        flex-wrap: wrap; /* Permitir que se envuelvan en pantallas muy pequeñas */  
+        justify-content: center; /* Alinear el contenido */  
+    }
+    .skills-contain{
+        flex-direction: column;
+    }
+    .skills-levels{
+        margin-bottom: 3rem;
+    }
+    .contain-other-skills{
+        margin-bottom: 2rem;
+    }  
+
+    /*------- Accordion -------*/
+    .accordion-body .content-accordion{
+        flex-direction: column;
+    }
+    .first-content-acc{
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {  
+    .education-text .d-flex {  
+        flex-direction: column; /* Cambia la dirección del flex a columna */  
+        align-items: center; /* Centra horizontalmente los certificados */  
+    }  
+
+    .education-text .d-flex > div {  
+        margin-bottom: 10px; /* Espacio reducido entre certificados */  
+        width: 90%; /* Ancho del contenedor de cada certificado */  
+        display: flex;   
+        flex-direction: column;  
+        align-items: center; /* Centra los elementos dentro del div */  
+        text-align: center; /* Alínea el texto al centro */  
+        padding-left: 15px; /* Ajusta el padding izquierdo si hay pe-3 */  
+        padding-right: 15px; /* Ajusta el padding derecho si hay ps-3 */  
+    }   
+    
+    .education-text .d-flex img {  
+        width: 100%; /* Las imágenes ocuparán el 100% del contenedor */  
+        height: auto; /* Mantiene la proporción de la imagen */  
+    }  
+
+    .certificate-text {  
+        font-size: 14px; /* Reduce el tamaño de la fuente para la descripción */  
+    }  
+
+    .title-platzi, .title-sololearn {  
+        font-size: 16px; /* Reduce el tamaño de la fuente para los títulos */  
+    }  
+}  
