@@ -25,7 +25,7 @@
 <body>
 
     <!----- Navbar ----->
-    <nav class="navbar navbar-expand-md  justify-content-end">
+    <nav class="navbar navbar-expand-lg  justify-content-end fixed-top ">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,22 +34,22 @@
 
             <ul class="navbar-nav mb-2 mb-lg-0 pe-5">
                 <li class="nav-item ">
-                    <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" aria-current="page" href="#home">Inicio</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Sobre mi</a>
+                    <a class="nav-link" href="#about me">Sobre mi</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Habilidades</a>
+                    <a class="nav-link" href="#skills">Habilidades</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Portafolio</a>
+                    <a class="nav-link" href="#portfolio">Portafolio</a>
                 </li>
             </ul>
         </div>
     </nav>
     <!----- Section hero ----->
-    <section class="hero d-flex ">
+    <section class="hero d-flex " id="home">
         <div class="container vertical-center px-5">
             <div class="row ">
                 <div class="titles-contain col-12 mb-5 mt-5 ">
@@ -81,7 +81,7 @@
     </section>
 
     <!---------- Section About Me ---------->
-    <section class="about-me text-center py-1" id="obout">
+    <section class="about-me text-center py-1" id="about me">
         <div class="container-lg py-4 ">
             <div class="row justify-content-center align-items-center text-center mb-4">
                 <div class="col-lg-8">
@@ -233,7 +233,7 @@
     </section>
 
     <!--------- Skills --------->
-    <div class=" px-3 justify-content-center">
+    <div class=" px-3 justify-content-center" id="skills">
         <h3 class="title-skills mb-4">Habilidades</h3>
 
         <div class="skills-contain d-flex">
@@ -328,23 +328,32 @@
     </div>
 
     <!------------- Portfolio ------------->
-    <section class="portfolio d-flex flex-column" id="portfolio">
-        <h2 class="title-portfolio">Portafolio</h2>
-        <div class="container text-center container-proyects">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="proyect">
-                        <img src="assets/img/Calculator Front.png" alt="Proyect Calculator">
-                        <div class="overlay"></div>
-                        <p>Proyecto 1</p>
-                        <div class="container-icons">
-                            <a href=""></a>
-                        </div>
-                    </div>
-                </div>
+    <section class="portfolio d-flex flex-column " id="portfolio">  
+        <h2 class="title-portfolio">Portafolio</h2>  
+        <div class="contain-card d-flex justify-content-between">
+            
+            <div class="card col-6 m-3" style="width: 25rem;">  
+                <div class="image-container">  
+                    <img src="assets/img/Calculator Front.png" class="card-img-top" alt="Calculadora">  
+                </div>  
+                <div class="card-body">  
+                    <h5 class="card-title">Calculadora</h5>  
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>  
+                    <a href="#" class="btn btn-primary">Go somewhere</a>  
+                </div>  
+            </div>
+            <div class="card col-6 m-3" style="width: 25rem;">  
+                <div class="image-container">  
+                    <img src="assets/img/Calculator Front.png" class="card-img-top" alt="Calculadora">  
+                </div>  
+                <div class="card-body">  
+                    <h5 class="card-title">Calculadora</h5>  
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>  
+                    <a href="#" class="btn btn-primary">Go somewhere</a>  
+                </div>  
             </div>
         </div>
-    </section>
+    </section> 
 
     <!--------------- Footer --------------->
     <footer class="footer">
