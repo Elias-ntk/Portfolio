@@ -68,7 +68,8 @@ a{
 
     /*----------- Navbar -----------*/
 .navbar {
-    padding: 1rem;
+    
+    background-color: #1c1c301c;
     
 }
 .navbar .nav-link,.navbar .nav-link.active{
@@ -289,13 +290,20 @@ h1{
     font-family: roboto;
     color:#9a9a9a;
 }
-.portfolio img{
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    display:block;
-    transition: all 0.2 ease;
+
+.card{
+    background-color: #231D30;
+}
+.card-body h5{
+    color: #9a9a9a;
+    font-weight: 600;
+}
+.card-body p{
+    color: #9a9a9a;
+}
+.card-body .btn{
+    background-color: #a872e8;
+    border: none;
 }
 .container-proyectes{
     padding-top: 60px;
