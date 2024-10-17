@@ -63,6 +63,7 @@ body {
 
 a{
     text-decoration: none;
+    color:inherit;
 }
 
 
@@ -280,9 +281,7 @@ h1{
 
 
 /*--------- Skills ---------*/
-#skills{
-    height: 600px;
-}
+
 .levels-text{
     color: #686868;
 }
@@ -310,7 +309,7 @@ h1{
 }
 /*--------- Lenguage Icons ---------*/
 .lenguage-icons-contain{
-    
+    background-color: #1c1c3028;
 }
 
 /*--------- Portfolio ---------*/
@@ -321,29 +320,41 @@ h1{
     color:#9a9a9a;
 }
 .card{
-    background-color: #231D30;
+    background-color: #811ab127;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */  
+    border-radius: 10px; /* Bordes redondeados */
 }
+/*--------- Efect transform Card ---------*/
+.card:hover {  
+    transform: scale(1.10); /* Aumentar el tamaño al pasar el mouse */  
+    box-shadow: 0 8px 16px rgba(137, 137, 137, 0.3); /* Aumentar sombra para efecto de elevación */  
+}  
 .card-body h5{
-    color: #9a9a9a;
+    color: #fff;
     font-weight: 600;
 }
 .card-body p{
-    color: #9a9a9a;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
-.card-body .btn{
-    background-color: #a872e8;
-    border: none;
-}
+
 .container-proyectes{
     padding-top: 60px;
     margin-bottom: 40px;
 }
+.card-text{
+    background-color: #382e4b;
+    padding:0.3rem;
+    border-radius: 8px;
+}
+
 
 /*----------- Footer -----------*/
 .footer{
     height: 200px;
     width: 100%;
-    background-color:#220e3c;
+    background-color:#7a7a7a2a;
 }
 
 
