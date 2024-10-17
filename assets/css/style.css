@@ -46,8 +46,8 @@
 .bg-custom-pl-light{
     background-color:#8d35ff;
 }
-.bg-custom-pl-light-{
-    background-color:#ec00f908;
+.bg-custom-trasparent{
+    background-color:#0000002c;
 }
 
 * {
@@ -68,10 +68,33 @@ a{
 
     /*----------- Navbar -----------*/
 .navbar {
-    
-    background-color: #1c1c301c;
+    background-color:#0a021900;
     
 }
+.navbar:hover{
+    background-color:#191424c8;
+}
+/*-------- Hideen ON --------*/
+.navbar {  
+    transition: top 0.3s; /* suaviza la transición */  
+}  
+.navbar.hidden {  
+    top: -200px; /* oculta el nav al desplazarse hacia abajo */  
+} 
+
+/* Menu Hamburguesa */
+.navbar-toggler {  
+    border-color: transparent; /* Cambia el color del borde si es necesario */  
+}   
+
+.navbar-toggler.custom-toggler .navbar-toggler-icon {  
+    background-color: #ffff; /* Cambia a tu color deseado */  
+}  
+
+.navbar-toggler.custom-toggler {  
+    border: none; /* Elimina el borde */  
+}  
+
 .navbar .nav-link,.navbar .nav-link.active{
     color:var(--texto-light);
 }
@@ -168,9 +191,13 @@ h1{
     background: #8d35ff;
     border-radius: 24px;
     font-weight: var(--font-semi-bold);
-    color: rgba(255, 255, 255, 0.804);
+    color:rgba(255, 255, 255, 0.804);
     padding: 10px 20px 10px 20px;
     font-weight: var(--font-semi-bold);
+}
+.button-portfolio:hover{
+    color:#0a0219;
+    background-color: #ff3c5f;
 }
 
 /*---------- About Me ----------*/
@@ -252,7 +279,10 @@ h1{
 
 
 
-/*--------- Lenguage Levels ---------*/
+/*--------- Skills ---------*/
+#skills{
+    height: 600px;
+}
 .levels-text{
     color: #686868;
 }
@@ -290,7 +320,6 @@ h1{
     font-family: roboto;
     color:#9a9a9a;
 }
-
 .card{
     background-color: #231D30;
 }
@@ -313,6 +342,7 @@ h1{
 /*----------- Footer -----------*/
 .footer{
     height: 200px;
+    width: 100%;
     background-color:#220e3c;
 }
 
@@ -326,12 +356,15 @@ h1{
         flex-wrap: nowrap; /* No permitir que los iconos se envuelvan */  
         justify-content: center; /* Centrar los iconos */  
     }
-
+    
       
 }  
 
 /* Para pantallas extra pequeñas (si necesita ser específico) */  
-@media (max-width: 575.98px) {  
+@media (max-width: 575.98px) {
+    
+    
+
     .lenguage-icons-contain .row {  
         flex-wrap: wrap; /* Permitir que se envuelvan en pantallas muy pequeñas */  
         justify-content: center; /* Alinear el contenido */  
@@ -353,9 +386,19 @@ h1{
     .first-content-acc{
         padding-bottom: 1.5rem;
     }
+
+    /*-------- Portfolio --------*/
+    .contain-card {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {  
+    /* Logo Code */
+    .code-hero img{
+        width: 350px;
+    }
+
     .education-text .d-flex {  
         flex-direction: column; /* Cambia la dirección del flex a columna */  
         align-items: center; /* Centra horizontalmente los certificados */  
@@ -384,4 +427,9 @@ h1{
     .title-platzi, .title-sololearn {  
         font-size: 16px; /* Reduce el tamaño de la fuente para los títulos */  
     }  
+
+    /*-------- Portfolio --------*/
+    .contain-card {
+        flex-direction: column;
+    }
 }  
