@@ -197,8 +197,9 @@ h1{
     font-weight: var(--font-semi-bold);
 }
 .button-portfolio:hover{
-    color:#0a0219;
-    background-color: #ff3c5f;
+    /* color:#0a0219;
+    background-color: #ff3c5f; */
+    filter: contrast(1.8)
 }
 
 /*---------- About Me ----------*/
@@ -220,6 +221,10 @@ h1{
     font-family:roboto;
     text-align: center; 
     margin:auto;
+    transition: 0.5s ease;
+}
+.title-aboutMe:hover{
+    color: #ff3c5f;
 }
 .about-text h3{
     font-weight:600;
@@ -281,7 +286,9 @@ h1{
 
 
 /*--------- Skills ---------*/
-
+.skills{
+    height: ;
+}
 .levels-text{
     color: #686868;
 }
@@ -294,6 +301,10 @@ h1{
     font-family:roboto;
     text-align: center; 
     margin:auto;
+    transition: 0.5s ease;
+}
+.title-skills:hover{
+    color: #ff3c5f;
 }
 .title-programacion-skills{
     color:#9a9a9a;
@@ -313,11 +324,20 @@ h1{
 }
 
 /*--------- Portfolio ---------*/
+.portfolio{
+    height: ;
+    
+    padding-bottom: 4rem;
+}
 .title-portfolio {
     font-size: var(--h2-font-size);
     font-weight: 800;
     font-family: roboto;
     color:#9a9a9a;
+    transition: 0.5s ease;
+}
+.title-portfolio:hover{
+    color: #ff3c5f;
 }
 .card{
     background-color: #811ab127;
@@ -328,7 +348,23 @@ h1{
 .card:hover {  
     transform: scale(1.10); /* Aumentar el tamaño al pasar el mouse */  
     box-shadow: 0 8px 16px rgba(137, 137, 137, 0.3); /* Aumentar sombra para efecto de elevación */  
+    filter: brightness(1.4)
 }  
+/*------------ Efect blur ------------*/
+.image-container {  
+    overflow: hidden; /* Asegúrate de que no se vea el desenfoque fuera del contenedor */  
+}  
+
+.img-card {  
+    transition: filter 0.3s ease; /* Transición suave para el desenfoque */  
+    
+}  
+
+.img-card:hover {  
+    
+}
+
+
 .card-body h5{
     color: #fff;
     font-weight: 600;
@@ -352,11 +388,31 @@ h1{
 
 /*----------- Footer -----------*/
 .footer{
-    height: 200px;
+    height: 35vh;
     width: 100%;
-    background-color:#7a7a7a2a;
+    background-color: #070211;
 }
-
+.title-footer{
+    font-size: var(--h3-font-size);
+    font-weight: 500;
+    font-family: roboto;
+    color: #fdf6e2;
+    padding-top: 1rem;
+}
+.footer-section a {  
+    color: #ff3c5f; /* Color de los enlaces */  
+    text-decoration: none; /* Eliminar subrayado de los enlaces */  
+    font-size: 1.2rem;
+}
+.footer-section li a:hover{
+    filter:contrast(1.8)
+} 
+.footer-social-icon i{
+    color: #9a9a9a;
+}
+.footer-social-icon i:hover{
+    color: #8d35ff;
+}
 
 
 
