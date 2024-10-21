@@ -159,7 +159,10 @@ h1{
     color: #FFFFFF;
     
 }
-
+/*--------- Logo Code ---------*/
+.code-hero{
+    
+}
 /*-------- HOME SOCIAL --------*/
 .home-social{
     /* height:100px; */
@@ -386,7 +389,7 @@ h1{
 
 /*----------- Footer -----------*/
 .footer{
-    height: 40vh;
+    
     width: 100%;
     background-color: #070211;
 }
@@ -397,12 +400,12 @@ h1{
     color: #fdf6e2;
     padding-top: 1rem;
 }
-.footer-section a {  
+.footer-section-nav a {  
     color: #ff3c5f; /* Color de los enlaces */  
     text-decoration: none; /* Eliminar subrayado de los enlaces */  
     font-size: 1.2rem;
 }
-.footer-section li a:hover{
+.footer-section-nav li a:hover{
     filter:contrast(1.8)
 } 
 .footer-social-icon i{
@@ -411,6 +414,7 @@ h1{
 .footer-social-icon i:hover{
     color: #8d35ff;
 }
+
 
 
 
@@ -454,6 +458,15 @@ h1{
 
     /*-------- Portfolio --------*/
     .contain-card {
+        flex-direction: column;
+    }
+
+    /*---------- Footer ----------*/
+    .footer-section-nav ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer-social{
         flex-direction: column;
     }
 }
