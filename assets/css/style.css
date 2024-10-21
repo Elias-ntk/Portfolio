@@ -46,8 +46,8 @@
 .bg-custom-pl-light{
     background-color:#8d35ff;
 }
-.bg-custom-pl-light-{
-    background-color:#ec00f908;
+.bg-custom-trasparent{
+    background-color:#0000002c;
 }
 
 * {
@@ -63,15 +63,39 @@ body {
 
 a{
     text-decoration: none;
+    color:inherit;
 }
 
 
     /*----------- Navbar -----------*/
 .navbar {
-    
-    background-color: #1c1c301c;
+    background-color:#0a021900;
     
 }
+.navbar:hover{
+    background-color:#191424c8;
+}
+/*-------- Hideen ON --------*/
+.navbar {  
+    transition: top 0.3s; /* suaviza la transición */  
+}  
+.navbar.hidden {  
+    top: -200px; /* oculta el nav al desplazarse hacia abajo */  
+} 
+
+/* Menu Hamburguesa */
+.navbar-toggler {  
+    border-color: transparent; /* Cambia el color del borde si es necesario */  
+}   
+
+.navbar-toggler.custom-toggler .navbar-toggler-icon {  
+    background-color: #ffff; /* Cambia a tu color deseado */  
+}  
+
+.navbar-toggler.custom-toggler {  
+    border: none; /* Elimina el borde */  
+}  
+
 .navbar .nav-link,.navbar .nav-link.active{
     color:var(--texto-light);
 }
@@ -135,7 +159,10 @@ h1{
     color: #FFFFFF;
     
 }
-
+/*--------- Logo Code ---------*/
+.code-hero{
+    
+}
 /*-------- HOME SOCIAL --------*/
 .home-social{
     /* height:100px; */
@@ -168,14 +195,19 @@ h1{
     background: #8d35ff;
     border-radius: 24px;
     font-weight: var(--font-semi-bold);
-    color: rgba(255, 255, 255, 0.804);
+    color:rgba(255, 255, 255, 0.804);
     padding: 10px 20px 10px 20px;
     font-weight: var(--font-semi-bold);
+}
+.button-portfolio:hover{
+    /* color:#0a0219;
+    background-color: #ff3c5f; */
+    filter: contrast(1.8)
 }
 
 /*---------- About Me ----------*/
 .about-me{
-    height: ;
+    
 }
 
 .pretitle-aboutMe{
@@ -186,12 +218,15 @@ h1{
 .title-aboutMe{
     color:#9a9a9a;
     font-weight:800;
-    background-color:;
     width:300px;
     font-size:2.8rem;
     font-family:roboto;
     text-align: center; 
     margin:auto;
+    transition: 0.5s ease;
+}
+.title-aboutMe:hover{
+    color: #ff3c5f;
 }
 .about-text h3{
     font-weight:600;
@@ -252,19 +287,25 @@ h1{
 
 
 
-/*--------- Lenguage Levels ---------*/
+/*--------- Skills ---------*/
+.skills{
+
+}
 .levels-text{
     color: #686868;
 }
 .title-skills{
     color:#9a9a9a;
     font-weight:800;
-    background-color:;
     width:300px;
     font-size:2.8rem;
     font-family:roboto;
     text-align: center; 
     margin:auto;
+    transition: 0.5s ease;
+}
+.title-skills:hover{
+    color: #ff3c5f;
 }
 .title-programacion-skills{
     color:#9a9a9a;
@@ -280,40 +321,98 @@ h1{
 }
 /*--------- Lenguage Icons ---------*/
 .lenguage-icons-contain{
-    
+    background-color: #1c1c3028;
 }
 
 /*--------- Portfolio ---------*/
+.portfolio{
+    
+    
+    padding-bottom: 4rem;
+}
 .title-portfolio {
     font-size: var(--h2-font-size);
     font-weight: 800;
     font-family: roboto;
     color:#9a9a9a;
+    transition: 0.5s ease;
+}
+.title-portfolio:hover{
+    color: #ff3c5f;
+}
+.card{
+    background-color: #811ab127;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */  
+    border-radius: 10px; /* Bordes redondeados */
+}
+/*--------- Efect transform Card ---------*/
+.card:hover {  
+    transform: scale(1.10); /* Aumentar el tamaño al pasar el mouse */  
+    box-shadow: 0 8px 16px rgba(137, 137, 137, 0.3); /* Aumentar sombra para efecto de elevación */  
+    
+}  
+/*------------ Efect blur ------------*/
+.image-container {  
+    overflow: hidden; /* Asegúrate de que no se vea el desenfoque fuera del contenedor */  
+}  
+
+.img-card {  
+    transition: filter 0.3s ease; /* Transición suave para el desenfoque */  
+    
+}  
+
+.img-card:hover {  
+    filter: brightness(1.5);
 }
 
-.card{
-    background-color: #231D30;
-}
+
 .card-body h5{
-    color: #9a9a9a;
+    color: #fff;
     font-weight: 600;
 }
 .card-body p{
-    color: #9a9a9a;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
-.card-body .btn{
-    background-color: #a872e8;
-    border: none;
-}
+
 .container-proyectes{
     padding-top: 60px;
     margin-bottom: 40px;
 }
+.card-text{
+    background-color: #382e4b;
+    padding:0.3rem;
+    border-radius: 8px;
+}
+
 
 /*----------- Footer -----------*/
 .footer{
-    height: 200px;
-    background-color:#220e3c;
+    
+    width: 100%;
+    background-color: #070211;
+}
+.title-footer{
+    font-size: var(--h3-font-size);
+    font-weight: 500;
+    font-family: roboto;
+    color: #fdf6e2;
+    padding-top: 1rem;
+}
+.footer-section-nav a {  
+    color: #ff3c5f; /* Color de los enlaces */  
+    text-decoration: none; /* Eliminar subrayado de los enlaces */  
+    font-size: 1.2rem;
+}
+.footer-section-nav li a:hover{
+    filter:contrast(1.8)
+} 
+.footer-social-icon i{
+    color: #9a9a9a;
+}
+.footer-social-icon i:hover{
+    color: #8d35ff;
 }
 
 
@@ -326,12 +425,15 @@ h1{
         flex-wrap: nowrap; /* No permitir que los iconos se envuelvan */  
         justify-content: center; /* Centrar los iconos */  
     }
-
+    
       
 }  
 
 /* Para pantallas extra pequeñas (si necesita ser específico) */  
-@media (max-width: 575.98px) {  
+@media (max-width: 575.98px) {
+    
+    
+
     .lenguage-icons-contain .row {  
         flex-wrap: wrap; /* Permitir que se envuelvan en pantallas muy pequeñas */  
         justify-content: center; /* Alinear el contenido */  
@@ -353,9 +455,28 @@ h1{
     .first-content-acc{
         padding-bottom: 1.5rem;
     }
+
+    /*-------- Portfolio --------*/
+    .contain-card {
+        flex-direction: column;
+    }
+
+    /*---------- Footer ----------*/
+    .footer-section-nav ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer-social{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 768px) {  
+    /* Logo Code */
+    .code-hero img{
+        width: 350px;
+    }
+
     .education-text .d-flex {  
         flex-direction: column; /* Cambia la dirección del flex a columna */  
         align-items: center; /* Centra horizontalmente los certificados */  
@@ -384,4 +505,9 @@ h1{
     .title-platzi, .title-sololearn {  
         font-size: 16px; /* Reduce el tamaño de la fuente para los títulos */  
     }  
+
+    /*-------- Portfolio --------*/
+    .contain-card {
+        flex-direction: column;
+    }
 }  
